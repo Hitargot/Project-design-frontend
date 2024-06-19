@@ -1,0 +1,312 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #1E3A8A;
+    color: white;
+    padding: 10px 0;
+    position: static;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Initially center align the logo */
+}
+
+header nav {
+    display: none; /* Hide the nav by default */
+    width: 100%;
+}
+
+header nav.show {
+    display: block; /* Show the nav when 'show' class is applied */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center align nav items */
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    background: #14274E;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #1E3A8A;
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center; /* Center align menu toggle */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        text-align: center; /* Center align logo by default */
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        text-align: right; /* Align menu toggle to the right */
+        margin-right: 20px; /* Add margin to the right for spacing */
+    }
+}
+
+.hero {
+    background: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 60px; /* to account for fixed header */
+}
+
+.hero img {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background: #1E3A8A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #14274E;
+}
+
+section {
+    padding: 60px 20px;
+    margin-top: 60px; /* to account for fixed header */
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.about .team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.services .service {
+    margin: 20px 0;
+}
+
+.portfolio .project {
+    margin: 20px 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio .project img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio .project h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 1px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project:hover .project-description {
+    opacity: 1;
+}
+
+.blog .blog-post {
+    margin: 20px 0;
+}
+
+.blog .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1E3A8A;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.blog .btn:hover {
+    background: #14274E;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact form input, 
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #1E3A8A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact form .btn:hover {
+    background: #14274E;
+}
+
+footer {
+    background: #1E3A8A;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        display: none; /* Hide the nav by default */
+        width: 100%;
+    }
+
+    header nav.show {
+        display: flex; /* Show the nav when 'show' class is applied */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 10px;
+        background: #14274E;
+        color: white;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .about .team {
+        flex-direction: column;
+        align-items: center;
+    }
+}
