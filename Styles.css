@@ -138,6 +138,10 @@ section p {
     margin: 0 auto 20px;
 }
 
+h3 {
+    text-align: center;
+}
+
 .about .team {
     display: flex;
     justify-content: space-around;
